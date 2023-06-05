@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "306849758566",
+    "firebase_url": "https://logicfuzzy-default-rtdb.firebaseio.com",
+    "project_id": "logicfuzzy",
+    "storage_bucket": "logicfuzzy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306849758566:android:df0f87b4dd3fe01875dca7",
+        "android_client_info": {
+          "package_name": "com.example.flutter_fuzzy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "306849758566-kmq6d0mi7nobef333nboaf91agqg5aru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAF5bGe0gUfjuKtdFzlevw6aG2rzD5NSto"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "306849758566-kmq6d0mi7nobef333nboaf91agqg5aru.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306849758566:android:21b8bc2f8b42432875dca7",
+        "android_client_info": {
+          "package_name": "com.example.logicfuzzy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "306849758566-kmq6d0mi7nobef333nboaf91agqg5aru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAF5bGe0gUfjuKtdFzlevw6aG2rzD5NSto"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "306849758566-kmq6d0mi7nobef333nboaf91agqg5aru.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306849758566:android:ab6bfed782a0695275dca7",
+        "android_client_info": {
+          "package_name": "com.example.loginfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "306849758566-kmq6d0mi7nobef333nboaf91agqg5aru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAF5bGe0gUfjuKtdFzlevw6aG2rzD5NSto"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "306849758566-kmq6d0mi7nobef333nboaf91agqg5aru.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
