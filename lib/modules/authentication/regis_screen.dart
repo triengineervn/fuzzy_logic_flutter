@@ -132,9 +132,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       textInputAction: TextInputAction.next,
       decoration: InputDecoration(
         suffixIcon: InkWell(
-            onTap: _toggle,
-            child:
-                _obscureText ? AppIcons.visibility_off : AppIcons.visibility),
+            onTap: _toggle, child: _obscureText ? AppIcons.visibility_off : AppIcons.visibility),
         prefixIcon: AppIcons.password,
         contentPadding: const EdgeInsets.all(16),
         hintText: 'Password',
@@ -148,8 +146,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       controller: confirmPasswordEditingController,
       obscureText: _obscureText,
       validator: (value) {
-        if (confirmPasswordEditingController.text !=
-            passwordEditingController.text) {
+        if (confirmPasswordEditingController.text != passwordEditingController.text) {
           return "Password don't match";
         }
         return null;
@@ -160,9 +157,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       textInputAction: TextInputAction.next,
       decoration: InputDecoration(
         suffixIcon: InkWell(
-            onTap: _toggle,
-            child:
-                _obscureText ? AppIcons.visibility_off : AppIcons.visibility),
+            onTap: _toggle, child: _obscureText ? AppIcons.visibility_off : AppIcons.visibility),
         prefixIcon: AppIcons.password,
         contentPadding: const EdgeInsets.all(16),
         hintText: 'Confirm Password',
@@ -199,6 +194,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       appBar: AppBar(
         backgroundColor: AppColors.APP_PRIMARY_BUTTON,
         elevation: 0,
+        title: const Text('Registration Screen'),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
@@ -222,6 +218,27 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     SizedBox(
                       height: 150,
                       child: Image.asset(AppAssets.water),
+                    ),
+                    sizeboxCustom,
+                    Center(
+                      child: Text(
+                        'Fuzzy logic'.toUpperCase(),
+                        style: const TextStyle(
+                          fontSize: 36,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                    ),
+                    sizeboxCustom,
+                    Center(
+                      child: Text(
+                        'water'.toUpperCase(),
+                        style: const TextStyle(
+                          color: AppColors.BLUE_GREEN,
+                          fontSize: 36,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
                     ),
                     sizeboxCustom,
                     firstNameField,
@@ -300,15 +317,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     userModel.firstName = firstNameEditingController.text;
     userModel.secondName = secondNameEditingController.text;
 
-    await firebaseFirestore
-        .collection("users")
-        .doc(user?.uid)
-        .set(userModel.toMap());
+    await firebaseFirestore.collection("users").doc(user?.uid).set(userModel.toMap());
     Fluttertoast.showToast(msg: "Account created successfully :) ");
 
-    Navigator.pushAndRemoveUntil(
-        (context),
-        MaterialPageRoute(builder: (context) => const BottomNavigationCustom()),
-        (route) => false);
+    Navigator.pushAndRemoveUntil((context),
+        MaterialPageRoute(builder: (context) => const BottomNavigationCustom()), (route) => false);
   }
 }

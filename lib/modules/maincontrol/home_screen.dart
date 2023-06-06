@@ -169,12 +169,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                         child: Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
-                                            Text(
-                                              'set volume v1'.toUpperCase(),
-                                              style: const TextStyle(
-                                                  fontSize: 15,
-                                                  fontWeight: FontWeight.bold,
-                                                  color: AppColors.APP_PRIMARY_BUTTON),
+                                            Center(
+                                              child: Text(
+                                                'set volume v1'.toUpperCase(),
+                                                style: const TextStyle(
+                                                    fontSize: 15,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: AppColors.WHITE),
+                                              ),
                                             ),
                                             Padding(
                                               padding: const EdgeInsets.only(top: 4),
@@ -220,12 +222,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                         child: Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
-                                            Text(
-                                              'get volumn v2'.toUpperCase(),
-                                              style: const TextStyle(
-                                                  fontSize: 15,
-                                                  fontWeight: FontWeight.bold,
-                                                  color: AppColors.APP_PRIMARY_BUTTON),
+                                            Center(
+                                              child: Text(
+                                                'get volumn v2'.toUpperCase(),
+                                                style: const TextStyle(
+                                                    fontSize: 15,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: AppColors.WHITE),
+                                              ),
                                             ),
                                             Padding(
                                               padding: const EdgeInsets.only(top: 4),

@@ -85,6 +85,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               sizeboxCustom,
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppColors.APP_PRIMARY_BUTTON,
+                ),
                 onPressed: () {
                   sharedPreferences.setBool('login', true);
                   logout(context);

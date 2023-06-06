@@ -26,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final _auth = FirebaseAuth.instance;
   String? errorMessage;
 
-  bool _obscureText = false;
+  bool _obscureText = true;
   void _toggle() {
     setState(() {
       _obscureText = !_obscureText;
@@ -81,9 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
       textInputAction: TextInputAction.done,
       decoration: InputDecoration(
         suffixIcon: InkWell(
-            onTap: _toggle,
-            child:
-                _obscureText ? AppIcons.visibility_off : AppIcons.visibility),
+            onTap: _toggle, child: _obscureText ? AppIcons.visibility_off : AppIcons.visibility),
         prefixIcon: AppIcons.password,
         contentPadding: const EdgeInsets.all(16),
         hintText: 'Password',
@@ -137,6 +135,29 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Image.asset(AppAssets.water),
                     ),
                     sizeboxCustom,
+                    Center(
+                      child: Text(
+                        'Fuzzy logic'.toUpperCase(),
+                        style: const TextStyle(
+                          fontSize: 42,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                    ),
+                    sizeboxCustom,
+                    Center(
+                      child: Text(
+                        'water'.toUpperCase(),
+                        style: const TextStyle(
+                          color: AppColors.BLUE_GREEN,
+                          fontSize: 42,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                    ),
+                    sizeboxCustom,
+                    sizeboxCustom,
+                    sizeboxCustom,
                     emailField,
                     sizeboxCustom,
                     passwordField,
@@ -152,8 +173,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) =>
-                                    const RegistrationScreen(),
+                                builder: (context) => const RegistrationScreen(),
                               ),
                             );
                           },
@@ -180,15 +200,13 @@ class _LoginScreenState extends State<LoginScreen> {
   void signIn(String email, String password) async {
     if (_formKey.currentState!.validate()) {
       try {
-        await _auth
-            .signInWithEmailAndPassword(email: email, password: password)
-            .then((uid) => {
-                  Fluttertoast.showToast(msg: "Login Successful"),
-                  sharedPreferences.setBool('login', false),
-                  sharedPreferences.setString('email', email),
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => const BottomNavigationCustom())),
-                });
+        await _auth.signInWithEmailAndPassword(email: email, password: password).then((uid) => {
+              Fluttertoast.showToast(msg: "Login Successful"),
+              sharedPreferences.setBool('login', false),
+              sharedPreferences.setString('email', email),
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => const BottomNavigationCustom())),
+            });
       } on FirebaseAuthException catch (error) {
         switch (error.code) {
           case "invalid-email":
@@ -231,9 +249,7 @@ class _LoginScreenState extends State<LoginScreen> {
     if (newUser == false) {
       // ignore: use_build_context_synchronously
       Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-              builder: (context) => const BottomNavigationCustom()));
+          context, MaterialPageRoute(builder: (context) => const BottomNavigationCustom()));
     }
   }
 

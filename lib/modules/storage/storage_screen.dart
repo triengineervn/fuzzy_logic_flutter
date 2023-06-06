@@ -49,14 +49,22 @@ class _StorageScreenState extends State<StorageScreen> {
                           Expanded(
                             child: Text(
                               'v1: ${listData[index].v1}',
-                              style: const TextStyle(fontSize: 18),
+                              style: const TextStyle(
+                                color: AppColors.APP_TEXT,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
                               textAlign: TextAlign.start,
                             ),
                           ),
                           Expanded(
                             child: Text(
                               'v2: ${listData[index].v2}',
-                              style: const TextStyle(fontSize: 18),
+                              style: const TextStyle(
+                                color: AppColors.APP_TEXT,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
                               textAlign: TextAlign.start,
                             ),
                           ),
@@ -65,7 +73,7 @@ class _StorageScreenState extends State<StorageScreen> {
                       Padding(
                         padding: const EdgeInsets.only(top: 4.0),
                         child: Text(
-                          'datetime ${listData[index].dateTime}',
+                          'DateTime: ${listData[index].dateTime}',
                           style: const TextStyle(fontSize: 18),
                           textAlign: TextAlign.start,
                         ),
