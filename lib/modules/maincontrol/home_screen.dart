@@ -188,7 +188,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     if (snapshot.connectionState ==
                                                         ConnectionState.waiting) {
                                                       return const Center(
-                                                          child: CircularProgressIndicator());
+                                                        child: CircularProgressIndicator(
+                                                          strokeAlign: 3,
+                                                        ),
+                                                      );
                                                     } else if (snapshot.hasError) {
                                                       return Text('${snapshot.error}');
                                                     } else {
@@ -241,7 +244,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     if (snapshot.connectionState ==
                                                         ConnectionState.waiting) {
                                                       return const Center(
-                                                          child: CircularProgressIndicator());
+                                                        child: CircularProgressIndicator(
+                                                          strokeAlign: 3,
+                                                        ),
+                                                      );
                                                     } else if (snapshot.hasError) {
                                                       return Text('${snapshot.error}');
                                                     } else {
@@ -286,12 +292,15 @@ class _HomeScreenState extends State<HomeScreen> {
                               StreamBuilder<Object>(
                                 stream: fetchAllDataFromFirebase(),
                                 builder: (context, snapshot) {
-                                  String temp = fuzzyCheck(snapshot.data
-                                      .toString()
-                                      .substring(1, snapshot.data.toString().indexOf(', v2')));
+                                  String temp = fuzzyCheck(snapshot.data.toString());
+                                  // print(temp);
 
                                   if (snapshot.connectionState == ConnectionState.waiting) {
-                                    return const Center(child: CircularProgressIndicator());
+                                    return const Center(
+                                      child: CircularProgressIndicator(
+                                        strokeAlign: 3,
+                                      ),
+                                    );
                                   } else if (snapshot.hasError) {
                                     return Text('${snapshot.error}');
                                   } else {

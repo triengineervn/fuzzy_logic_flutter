@@ -29,9 +29,8 @@ class _ChartsScreenState extends State<ChartsScreen> {
               // print(listData[0].v1 * 1.0);
               // print(listData[1].v2 * 1.0);
               // print(listData[2].dateTime);
-
-              for (int i = 0; i < listData.length; i = i + 3) {
-                print(listData);
+              print(listData.length);
+              for (int i = 0; i < listData.length - 1; i = i + 3) {
                 data.add(
                   DataPoint(
                     listData[i + 2].dateTime,

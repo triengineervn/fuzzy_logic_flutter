@@ -25,6 +25,7 @@ class _StorageScreenState extends State<StorageScreen> {
             return ListView.builder(
               itemCount: listData.length,
               itemBuilder: (context, index) {
+                print('${listData.length}');
                 return Container(
                   margin: const EdgeInsets.all(12),
                   padding: const EdgeInsets.all(12),
